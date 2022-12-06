@@ -1,4 +1,7 @@
 package com.csv.Pokedexapi.repository;
 
-public interface PokedexRepository {}
+import com.csv.Pokedexapi.models.Berry;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PokedexRepository extends JpaRepository<Berry,Long> {}
 
