@@ -18,4 +18,5 @@ public class BerriesDTO {
     private List<Berry> results = new ArrayList<>();
 
 
+
 }
