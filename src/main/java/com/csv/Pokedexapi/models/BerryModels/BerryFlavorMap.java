@@ -1,27 +1,24 @@
-package com.csv.Pokedexapi.models.CommonModels;
+package com.csv.Pokedexapi.models.BerryModels;
 
+import com.csv.Pokedexapi.models.CommonModels.NamedAPIResource;
+import com.csv.Pokedexapi.models.CommonModels.PokeAPIResource;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Language implements PokeAPIResource {
+public class BerryFlavorMap implements PokeAPIResource {
 
-    private Integer id;
-    private String name;
-    private boolean official;
-    private String iso639;
-    private String iso3166;
-    private List<Name> names;
+    private int potency;
+    private NamedAPIResource<BerryFlavor> flavor;
+
     @Override
     public int getId() {
-        return id;
+        return 0;
     }
 
     @Override

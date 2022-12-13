@@ -14,7 +14,7 @@ public class NamedAPIResourceList<T extends PokeAPIResource> implements PokeAPIR
 
     @Override
     @JsonIgnore
-    public Integer getId() {
+    public int getId() {
         return 0;
     }
 

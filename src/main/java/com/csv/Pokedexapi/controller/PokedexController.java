@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -20,24 +21,18 @@ public class PokedexController {
     @Autowired
     private PokedexService pokedexService;
 
-    //    @GetMapping(value = "/berry")
-//    public ModelAndView getBerries() {
-//        String url = "https://pokeapi.co/api/v2/berry";
-//        RestTemplate restTemplate = new RestTemplate();
-//        List<Berry> berries = Objects.requireNonNull(restTemplate.getForObject(url, BerriesDTO.class)).getResults();
-//
-//        ModelAndView mv = new ModelAndView("berry");
-//        mv.addObject("berry", berries);
-//
-//        return mv;
-//    }
-//
-
-    @GetMapping(value = "/berry") // gets all berries
-    public ResponseEntity<List<Berry>> getBerries() {
-        List<Berry> json = pokedexService.getBerries();
-        return ResponseEntity.ok(json);
+    @GetMapping(value = "/berry")
+    public ModelAndView getBerries() {
+        List<Berry> berry = pokedexService.getBerries();
+        return pokedexService.htmlRender("berry", berry);
     }
+
+
+//    @GetMapping(value = "/berry") // better method to request get, but without mv
+//    public ResponseEntity<List<Berry>> getBerries() {
+//        List<Berry> json = pokedexService.getBerries();
+//        return ResponseEntity.ok(json);
+//    }
 
 
 

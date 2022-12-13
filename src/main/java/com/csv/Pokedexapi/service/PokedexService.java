@@ -5,6 +5,7 @@ import com.csv.Pokedexapi.models.BerryModels.Berry;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 import java.util.Objects;
@@ -33,6 +34,12 @@ public class PokedexService {
         List<Berry> berries = Objects.requireNonNull(restTemplate.getForObject(url, BerriesDTO.class)).getResults();
 
         return berries;
+    }
+
+    public ModelAndView htmlRender(String berry, Object berryO) {
+        ModelAndView mv = new ModelAndView("berry");
+        mv.addObject("berry", berryO);
+        return mv;
     }
 
 }

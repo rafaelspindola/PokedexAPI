@@ -1,5 +1,7 @@
-package com.csv.Pokedexapi.models.CommonModels;
+package com.csv.Pokedexapi.models.BerryModels;
 
+import com.csv.Pokedexapi.models.CommonModels.Name;
+import com.csv.Pokedexapi.models.CommonModels.PokeAPIResource;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,17 +13,17 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Language implements PokeAPIResource {
+public class BerryFlavor implements PokeAPIResource {
 
-    private Integer id;
+    private int id;
     private String name;
-    private boolean official;
-    private String iso639;
-    private String iso3166;
+    private List<FlavorBerryMap> berries;
+//    private NamedAPIResource<ContestType> contestType;
     private List<Name> names;
+
     @Override
     public int getId() {
-        return id;
+        return 0;
     }
 
     @Override

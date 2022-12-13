@@ -6,6 +6,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public interface PokeAPIResource {
 
-    Integer getId();
+    int getId();
     String getName();
 }
