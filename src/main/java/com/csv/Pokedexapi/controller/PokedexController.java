@@ -3,7 +3,6 @@ package com.csv.Pokedexapi.controller;
 import com.csv.Pokedexapi.models.BerryModels.Berry;
 import com.csv.Pokedexapi.service.PokedexService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,17 +46,19 @@ public class PokedexController {
 //        return ResponseEntity.ok(berry);
 //    }
 
-    public ResponseEntity<Berry> getBerry() {
+//    public ResponseEntity<Berry> getBerry() {
+//        String url = "https://pokeapi.co/api/v2/berry/1";
+//        RestTemplate restTemplate = new RestTemplate();
+//        Berry berries = (restTemplate.getForObject(url, Berry.class));
+//        return ResponseEntity.ok(berries);
+//    }
+    @GetMapping(value = "/berry1")
+    public ModelAndView getBerry() {
         String url = "https://pokeapi.co/api/v2/berry/1";
         RestTemplate restTemplate = new RestTemplate();
-        Berry berries = (restTemplate.getForObject(url, Berry.class));
-        return ResponseEntity.ok(berries);
-    }
-    @GetMapping(value = "berry1")
-    public ModelAndView getBerry1() {
-        getBerry();
+        Berry berry1 = (restTemplate.getForObject(url, Berry.class));
         ModelAndView mv = new ModelAndView("berry1");
-        mv.addObject("berry1", getBerry());
+        mv.addObject("berry1", berry1);
         return mv;
     }
 }

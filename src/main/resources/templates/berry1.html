@@ -23,28 +23,40 @@
             </ol>
         </nav>
 
-        <div class="card shadow-sm rounded" style="margin-top 20px; margin-bottom: 20px;" th:each="berry : ${berry}">
+        <div class="card shadow-sm rounded" style="margin-top 20px; margin-bottom: 20px;">
             <!-- for each berry a card should be generated -->
             <div class="card-body">
                 <p class="card-subtitle mb-2 text muted" style="font-size: 0.8 rem;">
-                    <span th:text="${berry.id}"></span>
+                    <span>ID: </span>
+                    <span th:text="${berry1.id}"></span>
                     <br>
-                    <span th:utext="${berry.name}"></span>
+                    <span>Name: </span>
+                    <span th:text="${berry1.name}"></span>
                     <br>
-                    <span th:utext="${berry.growth_time}"></span>
+                    <span>Growth time: </span>
+                    <span th:text="${berry1.growth_time}"></span>
                     <br>
-                    <span th:text="${berry.max_harvest}"></span>
+                    <span>Max harvest: </span>
+                    <span th:text="${berry1.max_harvest}"></span>
                     <br>
-                    <span th:text="${berry.natural_gift_power}"></span>
+                    <span>Natural gift power: </span>
+                    <span th:text="${berry1.natural_gift_power}"></span>
                     <br>
-                    <span th:text="${berry.size}"></span>
+                    <span>Size: </span>
+                    <span th:text="${berry1.size}"></span>
                     <br>
-                    <span th:text="${berry.smoothness}"></span>
+                    <span>Smoothness: </span>
+                    <span th:text="${berry1.smoothness}"></span>
                     <br>
-                    <span th:text="${berry.soil_dryness}"></span>
+                    <span>Soil dryness: </span>
+                    <span th:text="${berry1.soil_dryness}"></span>
                     <br>
-                    <span th:text="${berry.firmness}"></span>
-                    <br>
+                    <span>Firmness: </span>
+                    <ol>
+                        <span th:text="${berry1.firmness.name}"></span>
+                        <br>
+                        <span th:text="${berry1.firmness.url}"></span>
+                    </ol>
                 </p>
             </div>
         </div>
