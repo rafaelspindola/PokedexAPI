@@ -36,10 +36,11 @@ public class PokedexService {
         return berries;
     }
 
-    public ModelAndView htmlRender(String berry, Object berryO) {
+    public ModelAndView Berries(String berry, Object berryO) {
         ModelAndView mv = new ModelAndView("berry");
         mv.addObject("berry", berryO);
         return mv;
     }
+
 
 }
