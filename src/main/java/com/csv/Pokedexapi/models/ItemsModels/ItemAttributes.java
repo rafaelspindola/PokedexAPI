@@ -10,4 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ItemAttributes {
+
+    private int id;
+    private String name;
 }
