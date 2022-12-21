@@ -3,7 +3,7 @@
 ## Briefing
 
 This project is intended to create a pokedex consuming a web API using java from pokedexapi.co and visualizing fetched json data through a front end design.
-It only works for the GET method, since the own API limits the HTTP request methods.
+It only works for the GET method, since the own API limits the HTTP request methods. At first I rendered front end using thymeleaf, but now I'm implementing it using Angular since it's one of the most used frameworks nowadays and a better way to build more complex and dynamic designs.
 
 ## Dependencies
 
