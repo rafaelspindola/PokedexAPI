@@ -1,6 +1,7 @@
 import { BerriesService } from './../services/berries.service';
 import { Berry } from './../dataModel/berry';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-berries',
@@ -9,9 +10,8 @@ import { Component } from '@angular/core';
 })
 export class BerriesComponent {
 
-  berries: Berry[] = [
-    //{_id: "1", name: 'cheri', url: 'aiushgeiase'}
-  ];
+  berries: Observable<Berry[]>
+  //= [{_id: '1', name: 'cheri', url: 'aiushgeiase'}];
   displayedColumns = ['name','url'];
 
   // berriesService: BerriesService;
