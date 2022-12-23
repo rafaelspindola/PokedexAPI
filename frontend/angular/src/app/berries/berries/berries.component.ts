@@ -1,7 +1,7 @@
 import { BerriesService } from './../services/berries.service';
 import { Berry } from './../dataModel/berry';
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-berries',
@@ -10,7 +10,8 @@ import { Observable } from 'rxjs';
 })
 export class BerriesComponent {
 
-  berries: Observable<Berry[]>
+  berries$: Observable<Berry[]>;
+  // berries: Berry[] = [];
   //= [{_id: '1', name: 'cheri', url: 'aiushgeiase'}];
   displayedColumns = ['name','url'];
 
@@ -19,7 +20,14 @@ export class BerriesComponent {
   constructor(private berriesService: BerriesService) {
     // this.berries = [];
     // this.berriesService = new BerriesService();
-    this.berries = this.berriesService.list();
+   this.berries$ = this.berriesService.list().pipe(
+    catchError(error => {
+      console.log(error);
+      return of([]) // observable with empty array
+    })
+   );
+
+    // this.berriesService.list().subscribe(berries => this.berries = berries );
   }
 
 }

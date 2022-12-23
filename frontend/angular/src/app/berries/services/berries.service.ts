@@ -2,20 +2,21 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Berry } from './../dataModel/berry';
-import { first, tap } from 'rxjs';
+import { delay, first, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BerriesService {
 
-  private readonly API = '/frontend/angular/src/assets/berries.json';
+  private readonly API = '/assets/berries.json';
 
   constructor(private httpClient: HttpClient) {}
 
   list() { //: Berry[]
-    return this.httpClient.get<Berry[]>(this.API).pipe(
-      first(),
+    return this.httpClient.get<Berry[]>(this.API)
+    .pipe(
+      first(), delay(5000),
       tap(berries => console.log(berries))
     ); //observable
   }
