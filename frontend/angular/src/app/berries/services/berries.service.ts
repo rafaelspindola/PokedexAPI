@@ -16,7 +16,7 @@ export class BerriesService {
   list() { //: Berry[]
     return this.httpClient.get<Berry[]>(this.API)
     .pipe(
-      first(), delay(5000),
+      first(), delay(2000),
       tap(berries => console.log(berries))
     ); //observable
   }

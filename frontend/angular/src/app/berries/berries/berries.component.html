@@ -9,13 +9,16 @@
         <!-- Name Column -->
         <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef>Name</th>
-        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+        <td mat-cell *matCellDef="let berry">{{ berry.name }}</td>
         </ng-container>
 
         <!-- URL Column -->
         <ng-container matColumnDef="url">
         <th mat-header-cell *matHeaderCellDef>URL</th>
-        <td mat-cell *matCellDef="let element">{{ element.url }}</td>
+
+        <td mat-cell *matCellDef="let berry">
+          <mat-icon aria-hidden="false" aria-label="Berry URL">{{berry.url | links}}</mat-icon>
+          {{berry.url}}</td>
         </ng-container>
 
         <!-- Weight Column
