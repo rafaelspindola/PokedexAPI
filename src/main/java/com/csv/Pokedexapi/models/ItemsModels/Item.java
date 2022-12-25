@@ -1,14 +1,9 @@
 package com.csv.Pokedexapi.models.ItemsModels;
 
-import com.csv.Pokedexapi.models.CommonModels.APIResource;
-import com.csv.Pokedexapi.models.CommonModels.Name;
-import com.csv.Pokedexapi.models.CommonModels.NamedAPIResource;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,6 +15,7 @@ public class Item {
     private String name;
     private int cost;
     private int fling_power;
+    private String url;
     // private NamedAPIResource<ItemFlingEffect> fling_effect;
     // private NamedAPIResource<ItemAttribute> attributes;
     // private NamedAPIResource<ItemCategory> category;

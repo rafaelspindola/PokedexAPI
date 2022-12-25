@@ -1,7 +1,9 @@
 package com.csv.Pokedexapi.service;
 
 import com.csv.Pokedexapi.DTO.BerriesDTO;
+import com.csv.Pokedexapi.DTO.ItemsDTO;
 import com.csv.Pokedexapi.models.BerryModels.Berry;
+import com.csv.Pokedexapi.models.ItemsModels.Item;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -34,6 +36,14 @@ public class PokedexService {
         List<Berry> berries = Objects.requireNonNull(restTemplate.getForObject(url, BerriesDTO.class)).getResults();
 
         return berries;
+    }
+
+    public List<Item> getItems() {
+        String url = "https://pokeapi.co/api/v2/item";
+        RestTemplate restTemplate = new RestTemplate();
+        List<Item> items = Objects.requireNonNull(restTemplate.getForObject(url, ItemsDTO.class)).getResults();
+
+        return items;
     }
 
     public ModelAndView Berries(String berry, Object berryO) {

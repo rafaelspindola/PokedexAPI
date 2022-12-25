@@ -1,8 +1,10 @@
 package com.csv.Pokedexapi.controller;
 
 import com.csv.Pokedexapi.models.BerryModels.Berry;
+import com.csv.Pokedexapi.models.ItemsModels.Item;
 import com.csv.Pokedexapi.service.PokedexService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,6 +32,12 @@ public class PokedexController {
 //        List<Berry> json = pokedexService.getBerries();
 //        return ResponseEntity.ok(json);
 //    }
+
+    @GetMapping(value = "/item")
+    public ResponseEntity<List<Item>> getItems() {
+        List<Item> json = pokedexService.getItems();
+        return ResponseEntity.ok(json);
+    }
 
 
 
