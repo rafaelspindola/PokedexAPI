@@ -9,7 +9,7 @@ import { delay, first, tap } from 'rxjs';
 })
 export class BerriesService {
 
-  private readonly API = '/assets/berries.json';
+  private readonly API = 'api/berry';
 
   constructor(private httpClient: HttpClient) {}
 

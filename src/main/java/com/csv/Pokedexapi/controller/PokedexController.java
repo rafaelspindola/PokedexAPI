@@ -20,18 +20,18 @@ public class PokedexController {
     @Autowired
     private PokedexService pokedexService;
 
-    @GetMapping(value = "/berry")
-    public ModelAndView getBerries() {
-        List<Berry> berry = pokedexService.getBerries();
-        return pokedexService.Berries("berry", berry);
-    }
-
-
-//    @GetMapping(value = "/berry") // better method to request get, but without mv
-//    public ResponseEntity<List<Berry>> getBerries() {
-//        List<Berry> json = pokedexService.getBerries();
-//        return ResponseEntity.ok(json);
+//    @GetMapping(value = "/berry")
+//    public ModelAndView getBerries() {
+//        List<Berry> berry = pokedexService.getBerries();
+//        return pokedexService.Berries("berry", berry);
 //    }
+
+
+    @GetMapping(value = "/api/berry") // better method to request get, but without mv
+    public ResponseEntity<List<Berry>> getBerries() {
+        List<Berry> json = pokedexService.getBerries();
+        return ResponseEntity.ok(json);
+    }
 
     @GetMapping(value = "/item")
     public ResponseEntity<List<Item>> getItems() {
