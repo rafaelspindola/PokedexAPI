@@ -18,11 +18,11 @@ public class Berry implements PokeAPIResource {
     private String name;
     private String url;
     private int growth_time;
-    private int max_harvest;
-    private int natural_gift_power;
-    private int size;
-    private int smoothness;
-    private int soil_dryness;
+//    private int max_harvest;
+//    private int natural_gift_power;
+//    private int size;
+//    private int smoothness;
+//    private int soil_dryness;
 //    private NamedAPIResource<BerryFirmness> firmness;
 //    private List<BerryFlavorMap> flavors;
 //    private NamedAPIResource<Item> item;

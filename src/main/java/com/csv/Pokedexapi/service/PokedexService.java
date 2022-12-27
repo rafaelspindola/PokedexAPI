@@ -7,7 +7,6 @@ import com.csv.Pokedexapi.models.ItemsModels.Item;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 import java.util.Objects;
@@ -46,11 +45,11 @@ public class PokedexService {
         return items;
     }
 
-    public ModelAndView Berries(String berry, Object berryO) {
-        ModelAndView mv = new ModelAndView("berry");
-        mv.addObject("berry", berryO);
-        return mv;
-    }
+//    public ModelAndView Berries(String berry, Object berryO) {
+//        ModelAndView mv = new ModelAndView("berry");
+//        mv.addObject("berry", berryO);
+//        return mv;
+//    } old method for thymeleaf rendering
 
 
 }
