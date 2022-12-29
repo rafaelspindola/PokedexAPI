@@ -21,9 +21,9 @@ It only works for the GET method, since the own API limits the HTTP request meth
 # What I've learned in this project 
 
 - First, I've never consumed an web API before. It was very difficult to manage how to deal with it by myself, but luckily a friend developer helped me to achive this goal. 
-- It was also another chance to consolidate my knowledge using thymeleaf. It's a nice tool to render initial front end designs.
+- It was an incredible chance to learn about frontend frameworks, particularly Angular, and how to link backend to frontend.
 - I've started developing the service package to abstract the request methods used in the controller and aiming to write clean code.
 
 ![pokedexide](https://user-images.githubusercontent.com/108681887/208010344-43d09990-964d-4d02-bf12-9a5806887128.PNG)
 ![Screenshot 2022-12-14 at 16-04-31 Screenshot](https://user-images.githubusercontent.com/108681887/208010350-8a8c1a1b-ba8f-48de-8811-d4eba2cac3a0.png)
-![Screenshot 2022-12-14 at 16-03-26 Pokedex](https://user-images.githubusercontent.com/108681887/208010357-6f8fcfa9-b865-43fd-8f22-252baa69dceb.png)
+![angular_frontend_pokedex](https://user-images.githubusercontent.com/108681887/209887080-674f6af6-37a3-42a0-8a83-c8601073b3e2.gif)
