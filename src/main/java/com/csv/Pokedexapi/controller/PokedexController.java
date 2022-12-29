@@ -40,6 +40,18 @@ public class PokedexController {
         return ResponseEntity.ok(json);
     }
 
+    @GetMapping(value = "api/item/{id}")
+    public ResponseEntity<Item> getItems(@PathVariable int id) {
+        String url = "https://pokeapi.co/api/v2/item/" + id;
+        RestTemplate restTemplate = new RestTemplate();
+        Item item = (restTemplate.getForObject(url,Item.class));
+        if (item == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+
+        return ResponseEntity.ok(item);
+    }
+
     @GetMapping(value = "api/berry/{id}") // gets specific berry
     public ResponseEntity<Berry> getBerry(@PathVariable int id) {
         String url = "https://pokeapi.co/api/v2/berry/" + id;
