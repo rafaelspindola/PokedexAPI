@@ -17,4 +17,14 @@ public class Ability implements PokeAPIResource {
     private List<AbilityEffectChange> effect_changes;
     private List<AbilityFlavorText> flavor_text_entries;
     private List<AbilityPokemon> pokemon;
+
+    @Override
+    public int getId() {
+        return 0;
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
 }

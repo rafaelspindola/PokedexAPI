@@ -1,12 +1,10 @@
-package com.csv.Pokedexapi.models.ItemsModels;
+package com.csv.Pokedexapi.models.PokemonModels.PokemonSpecies;
 
 import com.csv.Pokedexapi.models.CommonModels.NamedAPIResource;
 import com.csv.Pokedexapi.models.PokemonModels.Pokemon.Pokemon;
 
-import java.util.List;
+public class PokemonSpeciesVariety {
 
-public class ItemHolderPokemon {
-
+    private boolean is_default;
     private NamedAPIResource<Pokemon> pokemon;
-    private List <ItemHolderPokemonVersionDetail> version_details;
 }

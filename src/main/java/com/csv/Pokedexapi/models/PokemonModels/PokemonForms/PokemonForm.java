@@ -2,12 +2,13 @@ package com.csv.Pokedexapi.models.PokemonModels.PokemonForms;
 
 import com.csv.Pokedexapi.models.CommonModels.Name;
 import com.csv.Pokedexapi.models.CommonModels.NamedAPIResource;
+import com.csv.Pokedexapi.models.CommonModels.PokeAPIResource;
 import com.csv.Pokedexapi.models.PokemonModels.Pokemon.Pokemon;
 import com.csv.Pokedexapi.models.PokemonModels.Pokemon.PokemonFormType;
 
 import java.util.List;
 
-public class PokemonForm {
+public class PokemonForm implements PokeAPIResource {
 
     private int id;
     private String name;
@@ -23,4 +24,14 @@ public class PokemonForm {
 //    private NamedAPIResource<VersionGroup> version_group;
     private List<Name> names;
     private List<Name> form_names;
+
+    @Override
+    public int getId() {
+        return 0;
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
 }

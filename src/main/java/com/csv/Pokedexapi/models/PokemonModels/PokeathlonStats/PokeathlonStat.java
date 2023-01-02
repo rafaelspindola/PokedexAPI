@@ -12,4 +12,13 @@ public class PokeathlonStat implements PokeAPIResource {
     private List<Name> names;
     private List<NaturePokeathlonStatAffectSets> affecting_natures;
 
+    @Override
+    public int getId() {
+        return 0;
+    }
+
+    @Override
+    public String getName() {
+        return null;
+    }
 }

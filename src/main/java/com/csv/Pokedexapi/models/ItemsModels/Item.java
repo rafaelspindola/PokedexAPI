@@ -24,9 +24,9 @@ public class Item implements PokeAPIResource {
     private NamedAPIResource<ItemCategory> category;
     private List<VerboseEffect> effect_entries;
     private List<VersionGroupFlavorText> flavor_text_entries;
-     private List<GenerationGameIndex> game_indices;
+    private List<GenerationGameIndex> game_indices;
     private List<Name> names;
-    // private List<ItemSprites> sprites; // ?
+    private List<ItemSprites> sprites;
     private List<ItemHolderPokemon> held_by_pokemon;
     // private APIResource<EvolutionChain> baby_trigger_for;
     // private List<MachineVersionDetail> machines;
