@@ -1,8 +1,10 @@
 package com.csv.Pokedexapi.models.PokemonModels.Pokemon;
 
+import com.csv.Pokedexapi.models.CommonModels.PokeAPIResource;
+
 import java.util.List;
 
-public class Pokemon {
+public class Pokemon implements PokeAPIResource {
 
     private int id;
     private String name;
