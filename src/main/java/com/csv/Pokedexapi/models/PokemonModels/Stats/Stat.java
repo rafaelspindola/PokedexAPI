@@ -2,11 +2,12 @@ package com.csv.Pokedexapi.models.PokemonModels.Stats;
 
 import com.csv.Pokedexapi.models.CommonModels.APIResource;
 import com.csv.Pokedexapi.models.CommonModels.Name;
+import com.csv.Pokedexapi.models.CommonModels.PokeAPIResource;
 import com.csv.Pokedexapi.models.PokemonModels.Characteristics.Characteristic;
 
 import java.util.List;
 
-public class Stat {
+public class Stat implements PokeAPIResource {
 
     private int id;
     private String name;
