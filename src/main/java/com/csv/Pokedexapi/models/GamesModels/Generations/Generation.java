@@ -7,7 +7,6 @@ import com.csv.Pokedexapi.models.PokemonModels.Abilities.Ability;
 import com.csv.Pokedexapi.models.PokemonModels.PokemonSpecies.PokemonSpecies;
 import com.csv.Pokedexapi.models.PokemonModels.Types.Type;
 
-import javax.swing.plaf.synth.Region;
 import java.util.List;
 
 public class Generation {
